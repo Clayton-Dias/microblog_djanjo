@@ -1,0 +1,21 @@
+{% extends 'blog/_layout.html' %}
+
+{% block content %}
+
+<div class="postagens">
+    {% for postagem in postagens %}
+    <div class="postagem">
+        <p><strong>{{ postagem.data }}</strong></p>
+        <p>{{ postagem.conteudo }}</p>
+        {% if postagem.imagem %}
+        <img src="{{ postagem.imagem.url }}" alt="Imagem da postagem">
+        {% endif %}
+        <hr>
+    </div>
+    {% empty %}
+    <p>Não há postagens para exibir no momento.</p>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

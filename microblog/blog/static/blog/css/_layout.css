@@ -1,0 +1,252 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilo do header */
+header {
+    background-color: #3b5998;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+/* Navegação */
+nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+nav a {
+    font-size: 1.1rem;
+    color: #3b5998;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #3b5998;
+    color: white;
+}
+
+/* Main content */
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    flex: 1;
+}
+
+/* Seção das postagens */
+.postagens {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+.postagem {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.postagem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.postagem p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.postagem img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+hr {
+    margin: 10px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Formulário de Nova Postagem */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+}
+
+form button {
+    background-color: #3b5998;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #2d4373;
+}
+
+/* Botão Voltar */
+button a {
+    color: #3b5998;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+button a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #3b5998;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .postagens {
+        grid-template-columns: 1fr;
+    }
+
+    .postagem {
+        padding: 12px;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos para tablets (600px a 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .postagens {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .postagem {
+        padding: 15px;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        font-size: 1.1rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+/* Estilos para desktops (1024px ou maior) */
+@media (min-width: 1024px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    .postagens {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .postagem {
+        padding: 20px;
+    }
+
+    form input,
+    form textarea,
+    form button {
+        font-size: 1.2rem;
+    }
+
+    footer p {
+        font-size: 1.1rem;
+    }
+}

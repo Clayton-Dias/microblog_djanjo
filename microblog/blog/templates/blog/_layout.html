@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloguinho</title>
+    <link rel="stylesheet" href="{% static 'blog/css/_layout.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>Blog das postagens rapidinhas.</h1>
+    </header>
+
+    <nav>
+        <a href="/">Início</a>
+        <a href="/new_post">Nova Postagem</a>        
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 XYZ.</p>
+    </footer>
+</body>
+</html>

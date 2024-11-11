@@ -1,0 +1,16 @@
+{% extends 'blog/_layout.html' %}
+
+{% block content %}
+
+<h1>Crie uma nova postagem.</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Salvar Postagem</button>
+</form>
+
+<button> <a href="{% url 'index' %}">Voltar</a></button>
+
+{% endblock %}
+
