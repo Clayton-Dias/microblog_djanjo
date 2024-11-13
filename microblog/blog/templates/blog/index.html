@@ -4,13 +4,14 @@
 
 <div class="postagens">
     {% for postagem in postagens %}
-    <div class="postagem">
-        <p><strong>{{ postagem.data }}</strong></p>
-        <p>{{ postagem.conteudo }}</p>
+    <div class="postagem">        
+        <p><strong>{{postagem.title}}</strong></p>
+        <p>{{ postagem.conteudo}}</p>
         {% if postagem.imagem %}
         <img src="{{ postagem.imagem.url }}" alt="Imagem da postagem">
         {% endif %}
         <hr>
+        <p><strong>{{ postagem.data }}</strong></p>
     </div>
     {% empty %}
     <p>Não há postagens para exibir no momento.</p>

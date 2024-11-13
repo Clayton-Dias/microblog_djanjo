@@ -1,252 +1,257 @@
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;               /* Remove a margem padrão de todos os elementos */
+    padding: 0;              /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box;  /* Inclui o padding e a borda no cálculo da largura e altura dos elementos */
 }
 
 /* Estilos globais */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7fc;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: 'Arial', sans-serif;    /* Define a fonte básica do corpo */
+    background-color: #cedaee;           /* Define a cor de fundo do corpo */
+    color: #333;                         /* Define a cor do texto */
+    margin: 0;                           /* Remove a margem padrão do body */
+    padding: 0;                          /* Remove o padding do body */
+    display: flex;                       /* Usa flexbox para o layout */
+    flex-direction: column;              /* Organiza os elementos de forma vertical */
+    min-height: 100vh;                   /* Garante que o body ocupe pelo menos a altura total da tela */
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none;  /* Remove o sublinhado padrão dos links */
+    color: inherit;         /* Faz com que a cor do link herde a cor do elemento pai */
 }
 
 /* Estilo do header */
 header {
-    background-color: #3b5998;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #da9631;     /* Cor de fundo do header */
+    color: white;                  /* Cor do texto do header */
+    padding: 1.3rem;               /* Espaçamento interno do header */
+    text-align: center;            /* Centraliza o texto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Adiciona sombra suave ao redor do header */
 }
 
 header h1 {
-    font-size: 1.8rem;
-    margin: 0;
+    font-size: 1.8rem;     /* Tamanho da fonte do título */
+    margin: 0;             /* Remove a margem do título */
 }
 
 /* Navegação */
 nav {
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    background-color: #fff;  /* Cor de fundo da barra de navegação */
+    display: flex;            /* Usa flexbox para alinhar os itens */
+    justify-content: center;  /* Alinha os itens horizontalmente ao centro */
+    gap: 1rem;               /* Espaçamento entre os itens de navegação */
+    padding: 10px 0;         /* Espaçamento superior e inferior */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);  /* Adiciona sombra suave à barra de navegação */
 }
 
 nav a {
-    font-size: 1.1rem;
-    color: #3b5998;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.1rem;        /* Tamanho da fonte dos links */
+    color: #3b5998;           /* Cor do texto dos links */
+    padding: 8px 15px;        /* Espaçamento interno dos links */
+    border-radius: 5px;       /* Borda arredondada para os links */
+    transition: background-color 0.3s ease, color 0.3s ease;  /* Efeito suave de transição */
 }
 
 nav a:hover {
-    background-color: #3b5998;
-    color: white;
+    background-color: #3b5998;  /* Altera o fundo quando o mouse passa sobre o link */
+    color: white;                /* Altera a cor do texto para branco */
 }
 
 /* Main content */
 main {
-    width: 100%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 15px;
-    flex: 1;
+    width: 100%;              /* O conteúdo principal ocupa 100% da largura */
+    max-width: 1200px;        /* Limita a largura máxima a 1200px */
+    margin: 20px auto;        /* Espaçamento automático nas laterais para centralizar */
+    padding: 0 15px;          /* Espaçamento lateral */
+    flex: 1;                  /* Faz com que o main ocupe o espaço restante disponível */
 }
 
 /* Seção das postagens */
 .postagens {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr;
+    display: grid;                /* Usa grid layout para as postagens */
+    gap: 20px;                    /* Espaçamento entre as postagens */
+    grid-template-columns: 1fr;   /* Define que o grid deve ter uma coluna por padrão */
 }
 
 .postagem {
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;     /* Cor de fundo das postagens */
+    border-radius: 10px;         /* Bordas arredondadas */
+    padding: 15px;               /* Espaçamento interno das postagens */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);  /* Sombra suave nas postagens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Efeito de transição suave */
 }
 
 .postagem:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);  /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  /* Sombra mais forte quando a postagem é "hovered" */
 }
 
 .postagem p {
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #555;
+    font-size: 1rem;     /* Tamanho da fonte do conteúdo */
+    line-height: 1.5;    /* Espaçamento entre as linhas */
+    color: #555;         /* Cor do texto */
 }
 
 .postagem img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-top: 10px;
+    max-width: 100%;      /* Faz com que a imagem não ultrapasse o tamanho do container */
+    border-radius: 8px;   /* Bordas arredondadas na imagem */
+    margin-top: 10px;     /* Espaçamento acima da imagem */
 }
 
 hr {
-    margin: 10px 0;
-    border: 0;
-    border-top: 1px solid #ccc;
+    margin: 10px 0;        /* Espaçamento superior e inferior */
+    border: 0;             /* Remove a borda padrão */
+    border-top: 1px solid #ccc;  /* Adiciona uma linha horizontal */
 }
 
 /* Formulário de Nova Postagem */
 form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;        /* Cor de fundo do formulário */
+    padding: 20px;                 /* Espaçamento interno */
+    border-radius: 10px;           /* Bordas arredondadas */
+    width: 100%;                   /* O formulário ocupa 100% da largura */
+    max-width: 600px;              /* Limita a largura máxima */
+    margin: 20px auto;             /* Centraliza o formulário */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave */
 }
 
 form input,
 form textarea,
 form button {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-    color: #333;
+    width: 100%;               /* Cada campo ocupa 100% da largura do formulário */
+    padding: 1rem;             /* Espaçamento interno */
+    margin-bottom: 15px;       /* Espaçamento inferior */
+    border: 1px solid #ddd;    /* Borda cinza clara */
+    border-radius: 8px;        /* Bordas arredondadas */
+    font-size: 1rem;           /* Tamanho da fonte */
+    color: #333;               /* Cor do texto */
 }
 
 form button {
-    background-color: #3b5998;
-    color: white;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: #3b5998;  /* Cor de fundo do botão */
+    color: white;                /* Cor do texto do botão */
+    font-weight: bold;           /* Fonte em negrito */
+    border: none;                /* Remove a borda padrão */
+    cursor: pointer;            /* Cursor de mão ao passar sobre o botão */
+    transition: background-color 0.3s;  /* Efeito de transição no fundo */
 }
 
 form button:hover {
-    background-color: #2d4373;
+    background-color: #6fa4c7;  /* Altera a cor de fundo ao passar o mouse */
 }
 
 /* Botão Voltar */
 button a {
-    color: #3b5998;
-    font-size: 1rem;
-    text-decoration: none;
+    color: #3b5998;            /* Cor do link dentro do botão */
+    font-size: 1rem;            /* Tamanho da fonte do link */
+    text-decoration: none;      /* Remove o sublinhado do link */
 }
 
 button a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
 /* Footer */
 footer {
-    background-color: #3b5998;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+    background-color: #3b5998;  /* Cor de fundo do rodapé */
+    color: white;                /* Cor do texto do rodapé */
+    padding: 10px 0;             /* Espaçamento superior e inferior */
+    text-align: center;          /* Centraliza o texto */
 }
 
 footer p {
-    font-size: 1rem;
+    font-size: 1rem;  /* Tamanho da fonte do rodapé */
+}
+
+/* Estilo de mensagens de erro */
+.errorlist {
+    color: red;  /* Define a cor das mensagens de erro como vermelha */
 }
 
 /* Estilos responsivos para dispositivos móveis */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem;  /* Diminui o tamanho do título no cabeçalho */
     }
 
     nav {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column;    /* Organiza os itens de navegação verticalmente */
+        align-items: center;       /* Centraliza os itens de navegação */
     }
 
     nav a {
-        font-size: 1rem;
-        padding: 10px;
+        font-size: 1rem;        /* Diminui o tamanho da fonte dos links */
+        padding: 10px;          /* Aumenta o padding para facilitar o toque */
     }
 
     .postagens {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;  /* Exibe as postagens em uma coluna */
     }
 
     .postagem {
-        padding: 12px;
+        padding: 12px;            /* Diminui o padding nas postagens */
     }
 
     form input,
     form textarea,
     form button {
-        font-size: 1rem;
+        font-size: 1rem;  /* Ajusta o tamanho da fonte para dispositivos móveis */
     }
 
     footer p {
-        font-size: 0.9rem;
+        font-size: 0.9rem;  /* Diminui o tamanho da fonte no rodapé */
     }
 }
 
 /* Estilos para tablets (600px a 1024px) */
 @media (min-width: 600px) and (max-width: 1024px) {
     .postagens {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;  /* Exibe as postagens em duas colunas */
     }
 
     .postagem {
-        padding: 15px;
+        padding: 15px;            /* Ajusta o padding nas postagens */
     }
 
     form input,
     form textarea,
     form button {
-        font-size: 1.1rem;
+        font-size: 1.1rem;  /* Ajusta o tamanho da fonte do formulário */
     }
 
     footer p {
-        font-size: 1rem;
+        font-size: 1rem;  /* Ajusta o tamanho da fonte no rodapé */
     }
 }
 
 /* Estilos para desktops (1024px ou maior) */
 @media (min-width: 1024px) {
     body {
-        max-width: 1200px;
-        margin: 0 auto;
+        max-width: 1200px;  /* Limita a largura máxima do corpo */
+        margin: 0 auto;     /* Centraliza o corpo na tela */
     }
 
     nav {
-        gap: 20px;
+        gap: 20px;  /* Aumenta o espaço entre os itens de navegação */
     }
 
     .postagens {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;  /* Exibe as postagens em três colunas */
     }
 
     .postagem {
-        padding: 20px;
+        padding: 20px;  /* Aumenta o padding nas postagens */
     }
 
     form input,
     form textarea,
     form button {
-        font-size: 1.2rem;
+        font-size: 1.2rem;  /* Aumenta o tamanho da fonte no formulário */
     }
 
     footer p {
-        font-size: 1.1rem;
+        font-size: 1.1rem;  /* Ajusta o tamanho da fonte no rodapé */
     }
 }

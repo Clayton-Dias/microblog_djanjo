@@ -6,6 +6,6 @@ from .models import Postagem
 
 @admin.register(Postagem)
 class PostagemAdmin(admin.ModelAdmin):
-    list_display = ('id', 'data', 'imagem', 'conteudo', 'status', 'data_expiracao')
+    list_display = ('id', 'data', 'title','imagem', 'conteudo', 'status', 'data_expiracao')
     search_fields = ('conteudo', 'data')
-    list_filter=('data',)
+    list_filter=('data','data_expiracao','status')
