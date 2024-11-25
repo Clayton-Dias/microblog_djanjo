@@ -1,3 +1,5 @@
+from datetime import timedelta
+from django.utils import timezone
 from django.db import models
 from django.core.exceptions import ValidationError
 from django.core.validators import MinLengthValidator, MaxLengthValidator
@@ -41,7 +43,7 @@ class Postagem(models.Model):
     )
 
     # Data de expiração da postagem
-    data_expiracao = models.DateTimeField()
+    data_expiracao = models.DateTimeField(default=timezone.now() + timedelta(days=365))
 
     class Meta:
         # Ordena as postagens pela data de criação (mais recentes primeiro)
